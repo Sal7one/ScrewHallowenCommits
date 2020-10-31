@@ -1,5 +1,5 @@
 # ScrewHallowenCommits
-A chrome extension that BRINGS ME BACK MA GREEN COMMITS BACK
+A chrome extension that BRINGS ME MA GREEN COMMITS BACK
 
 # You can actually use this extension with other sites with a little tickering. It saves values in chrome stoarge 
 
