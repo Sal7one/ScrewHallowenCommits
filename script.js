@@ -106,10 +106,12 @@ function ChangePageColors(dark, darkish,light,lightish){
     setTimeout(()=>{
       //Tooooo lazy toooo use arrive Js
       text = document.querySelector(".float-left.text-gray")
-      if(text!= null)
+      if(text!= null){
       text = text.children[0]
       text.innerHTML= text.innerHTML + " NOT! "
       text.style.color = "#30a14e"
+    }
+
     },2500)
   
   
