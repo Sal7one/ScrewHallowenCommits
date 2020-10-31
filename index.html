@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Color picker</title>
+</head>
+
+<body style="background: rgb(204, 203, 203); min-width: 270px;">
+    <div style="padding: 4px;">
+        <div >
+            <label for="dark" style="font-size: 16px; font-weight: bold;">Dark&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <Input id="dark" name="dark" type="color" value="#216e39"></Input>
+        </div>
+        <div style="margin-top: 7px;">
+            <label for="darkish" style="font-size: 16px;font-weight: bold; display: inline-block">Dark-ish&nbsp</label>
+            <Input id="darkish" name="darkish" type="color" style="margin-left: 4px; " value="#30a14e"></Input>
+        </div>
+        <div style="margin-top: 7px;">
+            <label for="lightish" style="font-size: 16px;font-weight: bold; display: inline-block">Light-ish</label>
+            <Input id="lightish" name="secondary" type="color" style="margin-left: 4px; " value="#40c463"></Input>
+        </div>
+        <div style="margin-top: 7px;">
+            <label for="light" style="font-size: 16px;font-weight: bold; display: inline-block">Light&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <Input id="light" name="light" type="color" style="margin-left: 4px; " value="#9be9a8"></Input>
+        </div>
+        <button class="changebtn" style="font-size: 16px; margin: 10% 0 0 15%; color:white; display: block; background-color: rgb(22, 138, 138); min-width: 125px; " >Change</button>
+            <label id="btn" class="switch">Hallowen Hate mode: </label>
+              <input class="allowedbtn" type="checkbox" data-num="2" />
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

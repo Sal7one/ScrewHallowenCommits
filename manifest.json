@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Screw Githubs Hallowen",
+  "version": "1.0.0",
+  "description": "GIVE ME MY GREEN COMMITS BACK",
+  "content_scripts": [
+    {
+      "run_at":"document_start",
+      "js": [
+        "script.js"
+      ],
+      "matches": ["*://github.com/*"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["firstrun.js"]
+  },
+  "web_accessible_resources": ["script.js","styles.css"],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+  ,"permissions":["storage", "tabs","activeTab"]
+}
