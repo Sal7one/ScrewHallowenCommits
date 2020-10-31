@@ -5,6 +5,7 @@ let lightKey = "light"
 let lightishKey = "lightishKey"
 let AllowedStat = "AllowedStat"
 let Changebtn = document.querySelector(".changebtn")
+let fillbtn = document.querySelector(".githubcolors")
 let Allowedbtn = document.querySelector(".allowedbtn")
 
 window.onload = function () {
@@ -22,8 +23,6 @@ window.onload = function () {
 
 
     if(Allowed == "Yes"){
-      loadCSS();
-    console.log("Changing Page Colors")
     if(Allowedbtn != null)
     Allowedbtn.setAttribute("checked", true);
     ChangePageColors(DarkColor, DarkishColor,LightColor,LightishColor)
@@ -58,17 +57,20 @@ function GetColors(){
     refresh();
 }
 
-
 // Change Root Colors to the chosen ones
 function ChangePageColors(dark, darkish,light,lightish){
   root.style.setProperty(`--color-calendar-halloween-graph-day-L4-bg`, `${dark}`);
   root.style.setProperty(`--color-calendar-halloween-graph-day-L3-bg`, `${darkish}`);
   root.style.setProperty(`--color-calendar-halloween-graph-day-L1-bg`, `${light}`);
   root.style.setProperty(`--color-calendar-halloween-graph-day-L2-bg`, `${lightish}`);
+  hatemessage()
 }
 
     if(Changebtn != null)
   Changebtn.addEventListener("click", GetColors)
+  
+  if(fillbtn != null)
+  fillbtn.addEventListener("click", fillcolors)
   if(Allowedbtn != null)
   Allowedbtn.addEventListener("click", function () {
     if (Allowedbtn.checked) {
@@ -99,22 +101,21 @@ function ChangePageColors(dark, darkish,light,lightish){
       chrome.storage.local.set({ [key]: thingy });
     }
 
-    function loadCSS() {
-      var link = document.createElement("link");
-      link.href = chrome.runtime.getURL('salehstyle.css');
-      link.id = 'salehstyle.css';
-      link.type = "text/css";
-      link.rel = "stylesheet";
-      document.getElementsByTagName("html")[0].appendChild(link);
+
+  function hatemessage(){
+    setTimeout(()=>{
+      //Tooooo lazy toooo use arrive Js
+      text = document.querySelector(".float-left.text-gray")
+      text = text.children[0]
+      text.innerHTML= text.innerHTML + " NOT! "
+      text.style.color = "#30a14e"
+    },2500)
+  
+  
   }
-
-  setTimeout(()=>{
-    //Tooooo lazy toooo use arrive Js
-    text = document.querySelector(".float-left.text-gray")
-    text = text.children[0]
-    text.innerHTML= text.innerHTML + " NOT! "
-    text.style.color = "#30a14e"
-  },2500)
-
-
+ 
+  function fillcolors(){
+    document.querySelector("#dark").value = `#216e39`; document.querySelector("#darkish").value = `#30a14e`;
+    document.querySelector("#light").value = `#9be9a8`; document.querySelector("#lightish").value = `#40c463`;
+  }
   
